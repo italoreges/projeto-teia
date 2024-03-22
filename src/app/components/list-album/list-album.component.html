@@ -1,0 +1,38 @@
+<div class="content">
+    <h2>Albuns disponíveis</h2>
+        <!-- <app-card-album></app-card-album> -->
+
+    <mat-grid-list cols="3" rowHeight="550px" >
+        
+            <div *ngFor="let album of albuns">
+                <!-- <div >
+                    <img class="circle" src="{{album.thumbnailUrl}}" alt="">
+                </div>
+            
+                <h2><a routerLink="/list/{{album.id}}">{{album.id}} - {{album.title}}</a></h2> -->
+                <mat-grid-tile  >
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                        <div mat-card-avatar class="">
+                            <img class="circle" src="{{album.thumbnailUrl}}" alt="">
+                        </div>
+                        <mat-card-title>{{album.title | titlecase}}</mat-card-title>
+                        <!-- <mat-card-subtitle>Número: {{album.id}}</mat-card-subtitle> -->
+                        </mat-card-header>
+                        <img routerLink="/list/{{album.id}}" mat-card-image src="{{album.thumbnailUrl}}" alt="Álbum ">
+                        <mat-card-content>
+                            <p>
+                                Álbum: {{album.title | titlecase}}
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button routerLink="/list/{{album.id}}" >detalhe</button>
+                            <!-- <button mat-button>SHARE</button> -->
+                        </mat-card-actions>
+                    </mat-card>
+                </mat-grid-tile>
+
+            </div>
+     
+    </mat-grid-list>
+</div>
