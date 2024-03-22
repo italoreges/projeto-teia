@@ -1,4 +1,8 @@
 <div  *ngIf="album" class="class" >
-<p>Id: {{ album.id}}</p>
-<h1>{{album.title}}</h1>
+    <button mat-button  routerLink="/list" >voltar</button>
+    <mat-card-header>
+        <h1>Título: {{album.title | titlecase}}</h1>
+        <img src="{{album.url}}" alt="">
+    </mat-card-header>
+   
 </div>

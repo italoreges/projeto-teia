@@ -21,6 +21,10 @@ export class ListService {
     return this.http.get<Album[]>(this.apiUrl);
   }
 
+  getPageAlbuns(page: number): Observable<Album[]> {
+    return this.http.get<Album[]>(this.apiUrl + `?_page=` + page);
+  }
+
   getItem(id: number): Observable<Album> {
 
     return this.http.get<Album>(`${this.apiUrl}/${id}`)

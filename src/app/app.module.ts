@@ -19,6 +19,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator'
 import {MatGridListModule} from '@angular/material/grid-list'
 
+import {MatButtonModule} from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +43,10 @@ import {MatGridListModule} from '@angular/material/grid-list'
     MatToolbarModule,
     MatIconModule,
     MatPaginatorModule,
-    MatGridListModule
+    MatGridListModule,
+    MatButtonModule,
+    MatTableModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     provideClientHydration(),
